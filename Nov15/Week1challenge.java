@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Examples ascending("232425") --> true // Consecutive numbers 23, 24, 25
@@ -26,9 +25,13 @@ public class Week1challenge {
         ascending("23242567");
         squarePatch(4);
     }
-
+    /**
+     * better version to do in BetterWayToAcend. doing splitting is slower and too error prone if 99 is involved
+     * @param str
+     * @return boolean if a string consists of ascending numbers
+     */
     public static boolean ascending(String str) {
-        // a function that returns true if a string consists of ascending or ascending
+        // a function that returns true 
         // AND consecutive numbers.
         boolean con = false;
         char[] charArray = str.toCharArray();
