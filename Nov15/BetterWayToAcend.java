@@ -2,7 +2,7 @@ public class BetterWayToAcend {
     //code to create a string of ascending numbers instead of spliting, allows for a easier solution to inlude 99100
     //idea based off of https://www.geeksforgeeks.org/consecutive-sequenced-numbers-in-a-string/
     public static void main(String[] args) {
-        System.err.println( ascending("442443"));
+        System.err.println( ascending("99100101"));
     }
     public static boolean ascending(String str) {
         long strLength=str.length();
