@@ -23,7 +23,7 @@ public class RockPaperCode {
 
     public static String rps(String p1, String p2) {
         // switch for each player 1 actions
-        // extract messages(liked Nicky Kayyarath's centrialization of the win messages)
+        //messages(inspired by Nicky Kayyarath's centrialization of the win messages)
         String p1Win = "Player 1 wins";
         String p2Win = "Player 2 wins";
         String tie = "TIE";
@@ -74,7 +74,7 @@ public class RockPaperCode {
     }
 
     public static String rps_array(String p1, String p2) {
-        // messages(liked Nicky Kayyarath's centrialization of the win messages)
+        // messages(inspired by Nicky Kayyarath's centrialization of the win messages)
         String p1Win = "Player 1 wins";
         String p2Win = "Player 2 wins";
         String tie = "TIE";
