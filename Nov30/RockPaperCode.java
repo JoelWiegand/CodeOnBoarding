@@ -23,78 +23,92 @@ public class RockPaperCode {
 
     public static String rps(String p1, String p2) {
         // switch for each player 1 actions
+        // extract messages(I liked Nicky Kayyarath's centrialization of the win
+        // messages)
+        String p1Win = "Player 1 wins";
+        String p2Win = "Player 2 wins";
+        String tie = "TIE";
+        String p2InvlaidString = "Player 2 invalid, Player 1 Wins";
+        String p1InvlaidString = "Player 1 invalid, Player 2 Wins";
+
         switch (p1) {
         // player 1 choices
         case "rock":
             switch (p2) {
             // player 2 choices
             case "rock":
-                return "TIE";
+                return tie;
             case "paper":
-                return "Player 2 wins";
+                return p2Win;
             case "scissors":
-                return "Player 1 wins";
+                return p1Win;
             default:
-                return "Invalid Entry By Player 2";
+                return p2InvlaidString;
             }
         case "paper":
             switch (p2) {
             // player 2 choices
             case "rock":
-                return "Player 1 wins";
+                return p1Win;
             case "paper":
-                return "TIE";
+                return tie;
             case "scissors":
-                return "Player 2 wins";
+                return p2Win;
             default:
-                return "Invalid Entry By Player 2";
+                return p2InvlaidString;
             }
         case "scissors":
             switch (p2) {
             // player 2 choices
             case "rock":
-                return "Player 2 wins";
+                return p2Win;
             case "paper":
-                return "Player 1 wins";
+                return p1Win;
             case "scissors":
-                return "TIE";
+                return tie;
             default:
-                return "Invalid Entry By Player 2";
+                return p2InvlaidString;
             }
         default:
-            return "Invalid Entry By Player 1";
+            return p1InvlaidString;
         }
     }
 
     public static String rps_array(String p1, String p2) {
-        // try to use set
+        // extract messages(I liked Nicky Kayyarath's centrialization of the win
+        // messages)
+        String p1Win = "Player 1 wins";
+        String p2Win = "Player 2 wins";
+        String tie = "TIE";
+        String p2InvlaidString = "Player 2 invalid, Player 1 Wins";
+        String p1InvlaidString = "Player 1 invalid, Player 2 Wins";
         ArrayList<String> rpsArray = new ArrayList<String>();
-        //add all to arrayList
+        // add all to arrayList
         rpsArray.add("rock");
         rpsArray.add("paper");
         rpsArray.add("scissors");
-        String out = "TIE";
-        //find location of both players answers
+        String out = tie;
+        // find location of both players answers
         int p1M = rpsArray.indexOf(p1);
         int p2M = rpsArray.indexOf(p2);
-        //if invalid return early
+        // if invalid return early
         if (p1M == -1)
-            return "Player 1 invalid, Player 2 Wins";
+            out = p1InvlaidString;
         else if (p2M == -1)
-            return "Player 2 invalid, Player 1 Wins";
-        //edge case
+            out = p2InvlaidString;
+        // edge case
         else if (p1M == 3 && p2M == 1) {
-            out = "Player 2 wins";
+            out = p2Win;
         } else if (p1M == 1 && p2M == 3) {
-            out = "Player 1 wins";
+            out = p1Win;
         }
-        //normal indexs
+        // normal indexs
         else if (p1M < p2M) {
-            out = "Player 2 wins";
+            out = p2Win;
         } else if (p1M > p2M) {
-            out = "Player 1 wins";
+            out = p1Win;
         }
-        //return value
+        // return value, can be tested easier too
         return out;
     }
 }
