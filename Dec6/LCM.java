@@ -54,7 +54,7 @@ public class LCM {
 			finished = true;
 			for (int i : iArray) {
 				if (checkNum % i != 0) {
-					checkNum++;
+					checkNum+=iArray[0];
 					finished = false;//go to next number
 					continue;
 				}
